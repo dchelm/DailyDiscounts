@@ -1,0 +1,31 @@
+WAMP
+	http://stackoverflow.com/questions/10600795/wamp-server-error-forbidden-you-dont-have-permission-to-access-phpmyadmin-on
+	
+	Go to C:\wamp\alias. Open the file phpmyadmin.conf and add
+
+	Options Indexes FollowSymLinks MultiViews
+	Allow Override all
+	Order Deny,Allow
+	Deny from all
+	Allow from 127.0.0.1
+	Allow from MACHINE_IP
+
+SYMFONY2
+	bundle generator
+	php app/console generate:bundle --namespace=Daily/DiscountsBundle --format=yml
+	
+	Agregar Bundle a app/AppKernel.php
+	
+	editar app/config/routing_dev.php
+	
+	Cree un entity
+	//src/Daily/DiscountsBundle/Entity/Discount.php
+	
+	app/console doctrine:generate:entities DailyDiscountBundle
+	
+	app/console doctrine:database:create
+	app/console doctrine:schema:create
+	
+	Despues de generar cambios
+	
+	app/console doctrine:schema:update --force

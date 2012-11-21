@@ -1,0 +1,1 @@
+[2012-11-18 17:46:42] request.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /demo/hello/Fabien" (uncaught exception) at C:\wamp\www\Symfony\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\EventListener\RouterListener.php line 92 [] []

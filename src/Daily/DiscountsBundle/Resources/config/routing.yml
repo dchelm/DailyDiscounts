@@ -1,0 +1,30 @@
+daily_discounts_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: DailyDiscountsBundle:Default:index }
+
+daily_discounts_discounts_new:
+    pattern: /newdiscount
+    defaults: { _controller: DailyDiscountsBundle:Discounts:new }
+    
+daily_discounts_category_new:
+    pattern: /newcategory
+    defaults: { _controller: DailyDiscountsBundle:Category:new }
+    
+daily_discounts_category_edit:
+    pattern: /editcategory
+    defaults: { _controller: DailyDiscountsBundle:Category:edit }
+    
+daily_discounts_discounts_edit:
+    pattern: /editdiscount/{id}
+    defaults: { _controller: DailyDiscountsBundle:Discounts:edit }
+
+daily_discounts_discounts_show:
+    pattern: /discounts
+    defaults: { _controller: DailyDiscountsBundle:Discounts:show }
+
+daily_discounts_discount_showId:
+    pattern: /{id}
+    defaults: { _controller: DailyDiscountsBundle:Discounts:showId }
+    requirements:
+       _method: GET
+       id: \d+

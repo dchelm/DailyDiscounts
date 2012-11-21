@@ -1,0 +1,7 @@
+parameters:
+#    daily_discounts.example.class: Daily\DiscountsBundle\Example
+
+services:
+#    daily_discounts.example:
+#        class: %daily_discounts.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

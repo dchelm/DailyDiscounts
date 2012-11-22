@@ -65,7 +65,7 @@ class Discount
     protected $categories;
     //protected $user;
     
-
+    
     /**
      * Get id
      *

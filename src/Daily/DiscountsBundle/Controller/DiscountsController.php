@@ -25,7 +25,15 @@ class DiscountsController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
         
-        $blog = $em->getRepository('DailyDiscountBundle:Discount')->findAll();
+        $discounts = $em->getRepository('DailyDiscountsBundle:Discount')->findAll();
+        
+        if(!$discounts){
+            throw $this->createNotFoundException('Unable to find any discounts');
+        }
+        
+        return $this->render('DailyDiscountsBundle:Discount:showAll.html.twig',array(
+            'discounts' => $discounts,
+        ));
     }
     
 }

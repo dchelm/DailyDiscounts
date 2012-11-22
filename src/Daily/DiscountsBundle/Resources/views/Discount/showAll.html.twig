@@ -1,0 +1,12 @@
+{# src/Daily/DiscountsBundle/Resources/views/Discount/show.html.twig#}
+
+{% for discount in discounts %}
+    <a href="http://localhost/Symfony/web/app_dev.php/{{discount.id}}"> INFORMACION DEL DESCUENTO (ID:{{discount.id}}) </a> <br/><br/>
+    Nombre:     {{discount.name}}                           <br/>
+    Marca:      {{discount.brand}}                          <br/>
+    Precio:     {{discount.price}}                          <br/>
+    Caption:    {{discount.caption}}                        <br/>
+    Picture:    <img src="{{discount.picture}}" >           <br/>
+    Descripcion:{{discount.description}}                    <br/>
+    <hr>
+{% endfor %}
